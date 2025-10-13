@@ -18,6 +18,10 @@ type Config struct {
 		Name     string
 		SSLMode  string
 	}
+	Email struct {
+		Address  string
+		Password string
+	}
 }
 
 var Data Config
