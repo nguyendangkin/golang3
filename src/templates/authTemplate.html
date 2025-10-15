@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Xác Thực Tài Khoản</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f4f4f4;
+            }
+            .container {
+                max-width: 600px;
+                margin: 40px auto;
+                background-color: #ffffff;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+            .header {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                padding: 40px 20px;
+                text-align: center;
+                color: #ffffff;
+            }
+            .header h1 {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 600;
+            }
+            .content {
+                padding: 40px 30px;
+            }
+            .greeting {
+                font-size: 18px;
+                color: #333333;
+                margin-bottom: 20px;
+            }
+            .code-container {
+                background-color: #f8f9fa;
+                border: 2px dashed #667eea;
+                border-radius: 8px;
+                padding: 30px;
+                text-align: center;
+                margin: 30px 0;
+            }
+            .code-label {
+                font-size: 14px;
+                color: #666666;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .code {
+                font-size: 36px;
+                font-weight: bold;
+                color: #667eea;
+                letter-spacing: 8px;
+                font-family: "Courier New", monospace;
+            }
+            .info {
+                color: #666666;
+                font-size: 14px;
+                line-height: 1.6;
+                margin: 20px 0;
+            }
+            .warning {
+                background-color: #fff3cd;
+                border-left: 4px solid #ffc107;
+                padding: 15px;
+                margin: 20px 0;
+                border-radius: 4px;
+            }
+            .warning p {
+                margin: 0;
+                color: #856404;
+                font-size: 14px;
+            }
+            .footer {
+                background-color: #f8f9fa;
+                padding: 30px;
+                text-align: center;
+                color: #666666;
+                font-size: 13px;
+            }
+            .footer p {
+                margin: 5px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Xác Thực Tài Khoản</h1>
+            </div>
+
+            <div class="content">
+                <p class="greeting">Xin chào <strong>{{.Name}}</strong>,</p>
+
+                <p class="info">
+                    Chúng tôi đã nhận được yêu cầu xác thực tài khoản của bạn.
+                    Vui lòng sử dụng mã xác thực bên dưới để hoàn tất quá trình:
+                </p>
+
+                <div class="code-container">
+                    <div class="code-label">Mã Xác Thực</div>
+                    <div class="code">{{.Code}}</div>
+                </div>
+
+                <div class="warning">
+                    <p>
+                        Mã này sẽ hết hiệu lực sau <strong>5 phút</strong> kể từ
+                        thời điểm gửi.
+                    </p>
+                </div>
+
+                <p class="info">
+                    Nếu bạn không thực hiện yêu cầu này, vui lòng bỏ qua email
+                    này hoặc liên hệ với bộ phận hỗ trợ của chúng tôi.
+                </p>
+            </div>
+
+            <div class="footer">
+                <p>Trân trọng,</p>
+                <p><strong>Đội ngũ Hỗ Trợ</strong></p>
+                <p style="margin-top: 20px; font-size: 12px; color: #999999">
+                    Email này được gửi tự động, vui lòng không trả lời.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
